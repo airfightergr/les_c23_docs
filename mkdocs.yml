@@ -1,34 +1,18 @@
-site_name: Leading Edge Simulations DC-3 v2
-site_url: https://airfightergr.github.io/les_dc3_docs/
+site_name: Leading Edge Simulations <br>C-23 Sundowner v2.5.0
+site_url: https://airfightergr.github.io/les_c23_docs/
 
 nav:
   - Welcome:
     - Overview: index.md
     - Aircraft Characteristics: characteristics.md
     - User Interface: gui.md
-    - Liveries Concept: liveries.md
-    - Controls Setup: commands.md
+    #- Controls Setup: commands.md
     - Support: support.md
   - 'Select Aircraft':
-    - DC-3 Classic:
-        - Introduction: docs/classic/classic.md
-        - Pilot's Panel: docs/classic/plt_panel.md
-        - Copilot's Panel: docs/classic/cplt_panel.md
-        - Center Panel: docs/classic/center_panel.md
-        - Pedestal: docs/classic/pedestal.md
-        - Radios: docs/classic/radios.md
-        - Automatic Pilot: docs/classic/autopilot.md
-    - DC-3 Modern:
-        - Introduction: docs/modern/modern.md
-        - Pilot's Panel: docs/modern/pilot.md
-        - Copilot's Panel: docs/modern/copilot.md
-        - Center Panel: docs/modern/center_panel.md
-        - Radios & Avionics: docs/modern/avionics.md
-    - Common Systems:
-        - Overhead: docs/common/overhead.md
-        - Hydraulics: docs/common/hydraulics.md
-        - Other Systems: docs/common/other.md
-        - Engines Start: docs/common/engines_start.md
+    - C23 Original: docs/c23/c23.md
+    - C23 G1000: docs/c23_G1000/c23_G1000.md
+    - C23 G5: docs/c23_G5/c23_G5.md
+    - C23 G500: docs/c23_G500/c23_G500.md
 
 
 theme:
