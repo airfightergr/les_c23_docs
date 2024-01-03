@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://airfightergr.github.io/les_c23_docs/docs/common/engines_start/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Engines Start - Leading Edge Simulations <br>C-23 Sundowner v2.5.0</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Engines Start";
+        var mkdocs_page_input_path = "docs/common/engines_start.md";
+        var mkdocs_page_url = "/les_c23_docs/docs/common/engines_start/";
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Leading Edge Simulations <br>C-23 Sundowner v2.5.0
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../..">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../characteristics/">Aircraft Characteristics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../gui/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../liveries/">Liveries Concept</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../commands/">Controls Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Select Aircraft</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">DC-3 Classic</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="../../classic/classic.md">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../../classic/plt_panel.md">Pilot's Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../../classic/cplt_panel.md">Copilot's Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../../classic/center_panel.md">Center Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../../classic/pedestal.md">Pedestal</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../../classic/radios.md">Radios</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../../classic/autopilot.md">Automatic Pilot</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">DC-3 Modern</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="../../modern/modern.md">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../../modern/pilot.md">Pilot's Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../../modern/copilot.md">Copilot's Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../../modern/center_panel.md">Center Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../../modern/avionics.md">Radios & Avionics</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Common Systems</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../overhead/">Overhead</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../hydraulics/">Hydraulics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../other/">Other Systems</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Engines Start</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#first-steps">First Steps</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lets-start-the-engine">Let's start the engine</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#after-the-engine-started">After the engine started</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Leading Edge Simulations <br>C-23 Sundowner v2.5.0</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Select Aircraft &raquo;</li>
+          <li>Common Systems &raquo;</li>
+      <li>Engines Start</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="engines-start-procedure">Engines Start Procedure</h1>
+<div class="admonition note">
+<p class="admonition-title">NOTE</p>
+<p>The procedure has slightly altered to be possible to execute with the most common hardware.
+We strongly suggest the use of the checklist supplied with the aircraft in the DC3 Settings window.</p>
+</div>
+<h2 id="prerequisites">Prerequisites</h2>
+<ol>
+<li>Make sure that you have fuel in the tanks!</li>
+<li>Check batteries' voltage. If your batteries are not fully charged you won't be able to start the engines.
+To check batteries' voltage, open the Systems' window and check battery voltage. If the voltage is below ~20 volts,
+or the external temperature is low, you should use the GPU to start the engines.</li>
+</ol>
+<h2 id="first-steps">First Steps</h2>
+<ol>
+<li>Select, for each engine side the tank that has more fuel.</li>
+<li>Open the <a href="../other/#fire-extinguish-panel">Fire Extinguish Panel</a>, and turn knob 3 to the first engine.</li>
+<li>Turn on Master Magneto Switch.</li>
+<li>Turn on Start Safety Switch.</li>
+<li>Turn the engine's Generator on.</li>
+<li>Make sure mixture control is at the CUT-OFF position.</li>
+<li>Open the throttle a bit, about 1/10 of the full travel.</li>
+<li>Propeller control full forward.</li>
+<li>Carburetor heat control to cold.</li>
+<li>Set Cowl Flaps to TRAIL or OPEN.</li>
+</ol>
+<h2 id="lets-start-the-engine">Let's start the engine</h2>
+<p>We suggest to read once first the next steps before starting the execution, to have a better idea of the next steps, because you must perform them as fast as you can!</p>
+<ol>
+<li>Set engine start switch to ON. You should be able to see the propeller rotating. Using the numer pad keys, 7 for the left and 9 for the right engine, to set the view outside looking the engine.</li>
+<li>When the engine reach ~200 RPM, hold primer switch ON until RPMs go above 500.</li>
+<li>As fast as you can, set the mixture control to <strong>AUTO RICH</strong>.</li>
+<li>The engine should start, and the engine start switch will automatically flip to off position.</li>
+</ol>
+<h2 id="after-the-engine-started">After the engine started</h2>
+<ol>
+<li>With the engine around 600-800 RPM, check engine oil press rise.</li>
+<li>Warm up the engine, until temperature and pressures withing "green area", at around 800-1000 RPM.</li>
+<li>Use the build-in <a href="../../../gui/#checklist">checklist</a> to preform the rest <em>after engine start</em> checks.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../other/" class="btn btn-neutral float-left" title="Other Systems"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../other/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

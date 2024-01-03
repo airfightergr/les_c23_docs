@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://airfightergr.github.io/les_c23_docs/gui/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>User Interface - Leading Edge Simulations <br>C-23 Sundowner v2.5.0</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "User Interface";
+        var mkdocs_page_input_path = "gui.md";
+        var mkdocs_page_url = "/les_c23_docs/gui/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Leading Edge Simulations <br>C-23 Sundowner v2.5.0
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../characteristics/">Aircraft Characteristics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">User Interface</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#airframe">AIRFRAME</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#maintenance">MAINTENANCE</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#options">OPTIONS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#automatic-pilot">Automatic Pilot</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hardware-options">Hardware Options</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#failures">Failures</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ground-services">Ground Services</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#misc-options">Misc Options</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gps-options">GPS Options</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#panel-state-options">Panel State Options</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#loading">LOADING</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#checklist">CHECKLIST</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../liveries/">Liveries Concept</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../commands/">Controls Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Select Aircraft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">DC-3 Classic</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="../docs/classic/classic.md">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../docs/classic/plt_panel.md">Pilot's Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../docs/classic/cplt_panel.md">Copilot's Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../docs/classic/center_panel.md">Center Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../docs/classic/pedestal.md">Pedestal</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../docs/classic/radios.md">Radios</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../docs/classic/autopilot.md">Automatic Pilot</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">DC-3 Modern</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="../docs/modern/modern.md">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../docs/modern/pilot.md">Pilot's Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../docs/modern/copilot.md">Copilot's Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../docs/modern/center_panel.md">Center Panel</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../docs/modern/avionics.md">Radios & Avionics</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Common Systems</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../docs/common/overhead/">Overhead</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../docs/common/hydraulics/">Hydraulics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../docs/common/other/">Other Systems</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../docs/common/engines_start/">Engines Start</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Leading Edge Simulations <br>C-23 Sundowner v2.5.0</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Welcome &raquo;</li>
+      <li>User Interface</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="user-interface">User Interface</h1>
+<p>The user interface is the means for the user to interact with various faces of the flight, and as well as set various options, aircraft loading, etc.
+It is divided in 5 "tabs" or pages.</p>
+<h2 id="airframe">AIRFRAME</h2>
+<p>Gives the user info about the aircraft, the available liveries, and Credits.
+Also, there is a button <strong>READ THE MANUAL</strong>, to launch this site in your browser.</p>
+<p><img alt="Airframe" src="../all_acfs/gui_airframe.jpg" /></p>
+<h2 id="maintenance">MAINTENANCE</h2>
+<p>Provides a picture of aircraft's maintenance condition. More information in the maintenance page.</p>
+<div class="admonition hint">
+<p class="admonition-title">INFO</p>
+<p>While the aircraft in operation, ie. engine(s) running, maintenance execute buttons, will not be available.</p>
+</div>
+<p><img alt="MAINTENANCE" src="../all_acfs/gui_maintenance.jpg" /></p>
+<h2 id="options">OPTIONS</h2>
+<p>Here you can set the various options. Make sure that you press the <strong>SAVE</strong> button after selecting your option to be stored for the next flight.</p>
+<h3 id="automatic-pilot">Automatic Pilot</h3>
+<p>For the Classic aircraft, there are 2 option to select. Read more in the <a href="docs/classic/autopilot.md">Automatic Pilot</a>. 
+The Modern aircraft has installed the Bendix/King KAP-140, with altitude preselect.</p>
+<h3 id="hardware-options">Hardware Options</h3>
+<p>To help you with the taxi, there are 2 option to select.</p>
+<ul>
+<li>If you don't own 2 throttles, you can select the first option, and set the sensitivity as you like. This option reads your throttle position and depending on your rudder input, adjust the throttles. For example, to turn left, the left engine's throttles is retracted and the right engine's throttle is advanced.</li>
+<li>If you don't own rudder pedal with toe braking, you can select the second option, and using the rudder, differential brakes will be applied. At very low speeds, you might need to add a little power, while turning. </li>
+</ul>
+<h3 id="failures">Failures</h3>
+<p>While the aircraft has build in failures in case you don't manipulate the aircraft with the proper care, you can also select random failures provided by X-Plane. The Mean Time Between Failures (MBTF) is based on aircraft's maintenance status. </p>
+<h3 id="ground-services">Ground Services</h3>
+<p>You can set chocks and connect the GPU. If you connect the GPU, also chocks are set automatically. Disconnecting the GPU, <strong>will not</strong> remove the chocks. Also chocks will be automatically installed, if you load the aircraft in any state, except <strong>After Start</strong>.</p>
+<h3 id="misc-options">Misc Options</h3>
+<p>Selecting the <strong>Show Trim Pop Ups</strong>, will display, on the left lower corner of you screen, a pop up with the trim settings for pitch, roll, and yaw, as well the tail wheel lock status.
+If you select the <strong>Show Tablet</strong> option, a tablet with the Avitab will be shown. Requires the <a href="https://github.com/fpw/avitab/releases">Avitab plugin</a>.</p>
+<h3 id="gps-options">GPS Options</h3>
+<p>The modern aircraft comes with the X-Plane's G530 as standard. RXP GNS530 is supported, and you must activate through RXP's menu.</p>
+<p>The classic aircraft offers 3 GPS options.</p>
+<ul>
+<li><em>GNS400:</em> This is based on X-Plane's G430, but does not have the controls for COM1/NAV1.</li>
+<li><em>RealityXP GNS400</em></li>
+<li><em>RealityXP GTN650</em></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">INFO</p>
+<p>GPS's for the Classic aircraft, are only for advisory purposes. They are not connected in any way with aircraft's automatic pilot or navigation capabilities.</p>
+</div>
+<h3 id="panel-state-options">Panel State Options</h3>
+<ul>
+<li><em>Cold and Dark:</em> The aircraft will load with all systems off.</li>
+<li><em>Powered:</em> All electrical systems will be on.</li>
+<li><em>After Start:</em> All ready to start taxiing. But not forget to do the checks. Always read the checklist!</li>
+<li><em>Persistent:</em> The aircraft will load as you left her, after the last flight. By aware that each livery/airframe keeps track of her own status. Read more at the Liveries Concept page.</li>
+</ul>
+<p><img alt="OPTIONS" src="../all_acfs/gui_options.jpg" /></p>
+<h2 id="loading">LOADING</h2>
+<p>Here, on the left side, you can load the aircraft with passengers, cargo, and fuel.
+On the right side, you can monitor the CG, and the weights.</p>
+<div class="admonition danger">
+<p class="admonition-title">WARNING</p>
+<p>Fuel loading is not possible with the engines running, or if you are in flight mode in FS Economy!</p>
+</div>
+<p><img alt="LOADING" src="../all_acfs/gui_loading.jpg" /></p>
+<h2 id="checklist">CHECKLIST</h2>
+<p>A complete checklist, adapted for our aircraft. </p>
+<p>Click the small arrow on the left to open a checklist, and check the items. When a checklist is completed, the color of the specific checklist will turn from white to cyan, and <em>completed</em> is added. This allows for a quick overview which checklist is complete and which not.</p>
+<p>The <strong>RESET ALL CHECKLISTS</strong> on the top will reset all checklist, and a <strong>RESET CHECKLIST</strong> button to reset each checklist individually. </p>
+<p><img alt="CHECKLIST" src="../all_acfs/gui_checklist.jpg" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../characteristics/" class="btn btn-neutral float-left" title="Aircraft Characteristics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../liveries/" class="btn btn-neutral float-right" title="Liveries Concept">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../characteristics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../liveries/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
